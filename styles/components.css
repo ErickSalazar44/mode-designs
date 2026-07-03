@@ -299,16 +299,15 @@ section[id] {
   display: inline-block;
   font-family: var(--f-serif);
   font-weight: 300;
-  font-size: clamp(3rem, 8.5vw, 7.5rem);
+  font-size: clamp(3rem, 8.5vw, 6rem);
   line-height: 1.05;
   letter-spacing: 0.01em;
-  color: var(--c-footer);
+  color: var(--c-primary);
 }
 
 .category-item a:hover,
 .category-item a:focus-visible {
   font-family: var(--f-pixel);
-  font-weight: 400;
 }
 
 .category-item img {
@@ -328,7 +327,7 @@ section[id] {
 .category-item:hover img,
 .category-item:focus-within img {
   opacity: 1;
-  transform: translate(-50%, -50%) scale(1) rotate(0deg);
+  transform: translate(50%, -50%) scale(1) rotate(25deg);
 }
 
 /* Gallery */
