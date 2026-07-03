@@ -260,13 +260,11 @@ section[id] {
 
 /* Categorías (Explore By Category) */
 .categories {
-  padding-block: calc(var(--sp-lg) * 1.5);
   text-align: center;
-  /* Cuadrícula de fondo, como en modedesigns.com */
   background-image:
     linear-gradient(to right, rgba(28, 25, 23, 0.06) 1px, transparent 1px),
     linear-gradient(to bottom, rgba(28, 25, 23, 0.06) 1px, transparent 1px);
-  background-size: 9rem 9rem;
+  background-size: 6rem 6rem;
   background-position: center top;
 }
 
