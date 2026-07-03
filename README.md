@@ -17,14 +17,17 @@ web-desarrollo/
 │   ├── layout.css         Header, footer y secciones
 │   ├── components.css     Hero, cards, tablas, galería, pasos
 │   └── transitions.css    Animaciones y efectos hover
-└── assets/                Imágenes y video
+├── scripts/
+│   └── sound-test.js      Reproductor de los sound tests
+└── assets/                Imágenes, audio y video
 ```
 
 ## Stack
 
 - HTML5 semántico
-- Bootstrap 5.3 por CDN (grid, carousel de producto)
+- Bootstrap 5.3 por CDN (grid, carousel de producto) y Bootstrap Icons
 - CSS propio con custom properties, dividido por módulos
+- JavaScript vanilla para los sound tests de cada teclado
 - Fuentes de Google Fonts: Cormorant Garamond y Pixelify Sans
 
 `styles.css` es el único CSS propio que se enlaza; carga los módulos en
@@ -33,7 +36,7 @@ orden. Bootstrap se personaliza sobrescribiendo sus variables `--bs-*` en
 
 ## Animaciones
 
-Sutiles y sin JavaScript. En `transitions.css` hay cinco: el fundido al
+Sutiles y en CSS puro. En `transitions.css` hay cinco: el fundido al
 cambiar de página (View Transitions) y cuatro apariciones al hacer scroll
 —desplazamiento de títulos y cards, fundido de imágenes/tablas, zoom leve de
 la galería y entrada lateral de los labels— usando scroll-driven animations
