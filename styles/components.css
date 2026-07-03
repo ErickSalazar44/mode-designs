@@ -147,6 +147,64 @@
   margin-top: 0.25rem;
 }
 
+/* Sound test */
+.product-card .sound-btn {
+  position: absolute;
+  right: var(--sp-sm);
+  bottom: var(--sp-sm);
+  z-index: 2;
+  width: 2.5rem;
+  height: 2.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  border-radius: 50%;
+  background: rgba(0, 0, 0, 0.3);
+  backdrop-filter: blur(8px) saturate(150%);
+  -webkit-backdrop-filter: blur(8px);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  color: #fff;
+  cursor: pointer;
+  transition:
+    background 0.2s ease,
+    transform 0.2s ease;
+}
+
+.product-card .sound-btn:hover,
+.product-card .sound-btn:focus-visible {
+  background: rgba(0, 0, 0, 0.55);
+  transform: scale(1.08);
+}
+
+.sound-btn svg {
+  width: 1.1rem;
+  height: 1.1rem;
+  fill: currentColor;
+}
+
+.sound-btn .icon-stop,
+.sound-btn.is-playing .icon-play {
+  display: none;
+}
+
+.sound-btn.is-playing .icon-stop {
+  display: block;
+}
+
+.sound-btn.is-playing {
+  animation: sound-pulse 1.6s ease-out infinite;
+}
+
+@keyframes sound-pulse {
+  0% {
+    box-shadow: 0 0 0 0 rgba(255, 255, 255, 0.35);
+  }
+  100% {
+    box-shadow: 0 0 0 12px rgba(255, 255, 255, 0);
+  }
+}
+
 /* Steps */
 .steps {
   counter-reset: steps;
