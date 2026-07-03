@@ -41,7 +41,7 @@
 /* Hero */
 .hero {
   position: relative;
-  height: 70vh;
+  height: 90vh;
   overflow: hidden;
   display: flex;
   flex-direction: column;

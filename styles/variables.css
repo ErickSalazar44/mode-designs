@@ -11,14 +11,16 @@
   --c-footer: #1f2720;
 
   /* Tipografía */
-  --f-serif: 'Cormorant Garamond', 'Didot', 'Hoefler Text', 'Garamond', 'Palatino Linotype', Georgia, serif;
+  --f-serif:
+    'Cormorant Garamond', 'Didot', 'Hoefler Text', 'Garamond',
+    'Palatino Linotype', Georgia, serif;
   --f-pixel: 'Pixelify Sans', monospace;
 
   --fs-xs: 0.75rem;
   --fs-sm: 0.875rem;
   --fs-md: 1rem;
   --fs-xl: 2rem;
-  --fs-hero: clamp(3rem, 7vw, 8rem);
+  --fs-hero: clamp(3rem, 8vw, 9rem);
 
   /* Espaciado */
   --sp-sm: 1rem;
