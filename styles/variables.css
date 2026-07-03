@@ -1,0 +1,75 @@
+:root {
+  /* Colores */
+  --c-bg: #f6f0e3;
+  --c-surface: #edeae4;
+  --c-border: #d8d3cb;
+  --c-text: #1c1917;
+  --c-muted: #7c756e;
+  --c-accent: #3d3530;
+  --c-white: #ffffff;
+  --c-primary: oklch(33.9% 0.0503 150.99);
+  --c-footer: #1f2720;
+
+  /* Tipografía */
+  --f-serif: 'Cormorant Garamond', 'Didot', 'Hoefler Text', 'Garamond', 'Palatino Linotype', Georgia, serif;
+  --f-pixel: 'Pixelify Sans', monospace;
+
+  --fs-xs: 0.75rem;
+  --fs-sm: 0.875rem;
+  --fs-md: 1rem;
+  --fs-xl: 2rem;
+  --fs-hero: clamp(3rem, 7vw, 8rem);
+
+  /* Espaciado */
+  --sp-sm: 1rem;
+  --sp-md: 2rem;
+  --sp-lg: 4rem;
+
+  /* Max width */
+  --max-width: 1450px;
+
+  /* Altura del header sticky (logo 20px + padding + borde) */
+  --header-h: 61px;
+
+  /* Bootstrap — cuerpo */
+  --bs-body-bg: #f6f0e3;
+  --bs-body-color: #1c1917;
+  --bs-body-font-family: system-ui, -apple-system, 'Segoe UI', sans-serif;
+  --bs-body-font-size: 1rem;
+  --bs-body-line-height: 1.65;
+
+  /* Bootstrap — links */
+  --bs-link-color: #1c1917;
+  --bs-link-color-rgb: 28, 25, 23;
+  --bs-link-hover-color: #3d3530;
+  --bs-link-hover-color-rgb: 61, 53, 48;
+  --bs-link-decoration: none;
+
+  /* Bootstrap — forma */
+  --bs-border-radius: 6px;
+  --bs-border-radius-sm: 4px;
+  --bs-border-radius-lg: 8px;
+  --bs-border-radius-xl: 10px;
+  --bs-border-radius-pill: 100px;
+  --bs-box-shadow: none;
+  --bs-box-shadow-sm: none;
+  --bs-box-shadow-lg: none;
+  --bs-box-shadow-inset: none;
+
+  /* Bootstrap — botones */
+  --bs-btn-font-size: 0.875rem;
+  --bs-btn-border-radius: 3px;
+  --bs-btn-padding-x: 1.5rem;
+  --bs-btn-padding-y: 1.5rem;
+}
+
+ul,
+ol {
+  list-style: none;
+  padding-left: 0;
+  margin-bottom: 0;
+}
+
+a {
+  text-decoration: none;
+}

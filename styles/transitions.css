@@ -1,0 +1,206 @@
+/* Fundido al cambiar de página (View Transitions). La regla @view-transition
+   activa las transiciones entre documentos; sin ella no hay fundido. */
+@view-transition {
+  navigation: auto;
+}
+
+::view-transition-old(root),
+::view-transition-new(root) {
+  animation-duration: 250ms;
+  animation-timing-function: ease;
+}
+
+::view-transition-new(root) {
+  animation-name: fade;
+}
+::view-transition-old(root) {
+  animation-name: fade;
+  animation-direction: reverse;
+}
+
+/* Aparición al hacer scroll. Solo donde el navegador soporta scroll-driven
+   animations; si no, el contenido se ve normal (nunca queda oculto). */
+@keyframes reveal {
+  from {
+    opacity: 0;
+    transform: translateY(16px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes soft-fade {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+
+@keyframes gentle-zoom {
+  from {
+    opacity: 0;
+    transform: scale(0.98);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes slide-in {
+  from {
+    opacity: 0;
+    transform: translateX(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  @supports (animation-timeline: view()) {
+    .section-title,
+    .category-item,
+    .product-card {
+      animation: reveal linear both;
+      animation-timeline: view();
+      animation-range: entry 5% cover 20%;
+    }
+
+    .cover-img,
+    video,
+    .table-responsive {
+      animation: soft-fade linear both;
+      animation-timeline: view();
+      animation-range: entry 5% cover 25%;
+    }
+
+    .gallery .col {
+      animation: gentle-zoom linear both;
+      animation-timeline: view();
+      animation-range: entry 5% cover 20%;
+    }
+
+    .section-label {
+      animation: slide-in linear both;
+      animation-timeline: view();
+      animation-range: entry 0% cover 15%;
+    }
+  }
+}
+
+/* Transiciones de estado (hover / foco), sutiles */
+.btn {
+  transition:
+    background-color 0.2s ease,
+    color 0.2s ease,
+    border-color 0.2s ease;
+}
+
+.product-card .carousel {
+  transition: box-shadow 0.25s ease;
+}
+
+.product-card:hover .carousel {
+  box-shadow: 0 6px 20px rgba(28, 25, 23, 0.1);
+}
+
+.product-card h3 a,
+.filter-list a {
+  transition:
+    color 0.2s ease,
+    border-color 0.2s ease;
+}
+
+.gallery img {
+  transition: filter 0.3s ease;
+}
+
+.gallery img:hover {
+  filter: brightness(1.04);
+}
+
+/* Categorías: la imagen aparece con fundido suave y los enlaces
+   no enfocados se atenúan para destacar el activo */
+.category-item a {
+  transition:
+    opacity 0.3s ease,
+    color 0.3s ease;
+}
+
+.category-item img {
+  transition:
+    opacity 0.35s ease,
+    transform 0.35s ease;
+}
+
+.category-list:hover .category-item a {
+  opacity: 0.35;
+}
+
+.category-list .category-item:hover a,
+.category-list .category-item a:focus-visible {
+  opacity: 1;
+}
+
+/* Subrayado del menú */
+nav a {
+  position: relative;
+}
+
+nav a::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -4px;
+  width: 100%;
+  height: 1px;
+  background: var(--c-footer);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.25s ease;
+}
+
+nav a:hover::after,
+nav a.active::after {
+  transform: scaleX(1);
+}
+
+/* Skip-link: visible solo con foco de teclado */
+.skip-link {
+  position: absolute;
+  left: var(--sp-sm);
+  top: -100px;
+  z-index: 100;
+  background: var(--c-footer);
+  color: var(--c-white);
+  padding: 0.65rem 1.25rem;
+  border-radius: 4px;
+  font-size: var(--fs-sm);
+  transition: top 0.2s ease;
+}
+
+.skip-link:focus {
+  top: var(--sp-sm);
+  color: var(--c-white);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+  }
+}
+
+@keyframes fade {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
