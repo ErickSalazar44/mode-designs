@@ -177,10 +177,9 @@
   transform: scale(1.08);
 }
 
-.sound-btn svg {
-  width: 1.1rem;
-  height: 1.1rem;
-  fill: currentColor;
+.sound-btn .bi {
+  font-size: 1.1rem;
+  line-height: 1;
 }
 
 .sound-btn .icon-stop,

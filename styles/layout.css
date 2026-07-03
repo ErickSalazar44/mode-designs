@@ -62,9 +62,8 @@ nav ul {
 }
 
 nav a {
-  font-size: var(--fs-sm);
-  letter-spacing: 0.05em;
-  text-transform: uppercase;
+  font-size: var(--fs-md);
+  font-family: var(--f-serif);
   color: var(--c-muted);
   transition: color 0.2s;
 }
