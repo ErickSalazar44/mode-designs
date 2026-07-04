@@ -41,7 +41,8 @@
 /* Hero */
 .hero {
   position: relative;
-  height: calc(99dvh - var(--header-h));
+  height: calc(100vh - var(--header-h) - var(--sp-sm));
+  height: calc(100svh - var(--header-h) - var(--sp-sm));
   overflow: hidden;
   display: flex;
   flex-direction: column;
@@ -61,11 +62,18 @@
   position: relative;
   z-index: 1;
   color: var(--c-white);
-  display: flex;
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
   gap: var(--sp-sm);
-  justify-content: center;
   align-items: center;
-  margin: 0 auto;
+}
+
+.hero-text .hero-label:first-child {
+  justify-self: end;
+}
+
+.hero-text .hero-label:last-child {
+  justify-self: start;
 }
 
 .hero-text h1 {
