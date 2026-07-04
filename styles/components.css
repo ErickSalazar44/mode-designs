@@ -41,7 +41,7 @@
 /* Hero */
 .hero {
   position: relative;
-  height: 90vh;
+  height: calc(99dvh - var(--header-h));
   overflow: hidden;
   display: flex;
   flex-direction: column;
@@ -250,7 +250,11 @@ section[id] {
 .categories {
   text-align: center;
   background-image:
-    linear-gradient(to right, rgba(var(--c-text-rgb), 0.06) 1px, transparent 1px),
+    linear-gradient(
+      to right,
+      rgba(var(--c-text-rgb), 0.06) 1px,
+      transparent 1px
+    ),
     linear-gradient(
       to bottom,
       rgba(var(--c-text-rgb), 0.06) 1px,
