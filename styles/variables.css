@@ -4,11 +4,18 @@
   --c-surface: #edeae4;
   --c-border: #d8d3cb;
   --c-text: #1c1917;
+  --c-text-rgb: 28, 25, 23;
   --c-muted: #7c756e;
   --c-accent: #3d3530;
   --c-white: #ffffff;
+  --c-white-rgb: 255, 255, 255;
   --c-primary: oklch(33.9% 0.0503 150.99);
   --c-footer: #1f2720;
+
+  /* Efecto vidrio (badge y sound test sobre las fotos) */
+  --glass-bg: rgba(0, 0, 0, 0.3);
+  --glass-bg-hover: rgba(0, 0, 0, 0.55);
+  --glass-border: rgba(var(--c-white-rgb), 0.15);
 
   /* Tipografía */
   --f-serif:
@@ -20,12 +27,24 @@
   --fs-sm: 0.875rem;
   --fs-md: 1rem;
   --fs-xl: 2rem;
+  --fs-title: clamp(2.5rem, 4vw, 4.5rem);
+  --fs-display: clamp(3rem, 8.5vw, 6rem);
   --fs-hero: clamp(3rem, 8vw, 9rem);
 
   /* Espaciado */
   --sp-sm: 1rem;
   --sp-md: 2rem;
   --sp-lg: 4rem;
+
+  /* Radios */
+  --radius-sm: 3px;
+  --radius: 6px;
+  --radius-pill: 100px;
+
+  /* Duración de transiciones */
+  --t-fast: 0.2s;
+  --t-med: 0.25s;
+  --t-slow: 0.35s;
 
   /* Max width */
   --max-width: 1450px;
@@ -34,29 +53,18 @@
   --header-h: 61px;
 
   /* Bootstrap — cuerpo */
-  --bs-body-bg: #f6f0e3;
-  --bs-body-color: #1c1917;
+  --bs-body-bg: var(--c-bg);
+  --bs-body-color: var(--c-text);
   --bs-body-font-family: system-ui, -apple-system, 'Segoe UI', sans-serif;
   --bs-body-font-size: 1rem;
   --bs-body-line-height: 1.65;
 
   /* Bootstrap — links */
-  --bs-link-color: #1c1917;
-  --bs-link-color-rgb: 28, 25, 23;
-  --bs-link-hover-color: #3d3530;
+  --bs-link-color: var(--c-text);
+  --bs-link-color-rgb: var(--c-text-rgb);
+  --bs-link-hover-color: var(--c-accent);
   --bs-link-hover-color-rgb: 61, 53, 48;
 
   /* Bootstrap — forma */
-  --bs-border-radius: 6px;
-}
-
-ul,
-ol {
-  list-style: none;
-  padding-left: 0;
-  margin-bottom: 0;
-}
-
-a {
-  text-decoration: none;
+  --bs-border-radius: var(--radius);
 }
