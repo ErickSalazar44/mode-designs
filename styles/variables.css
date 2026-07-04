@@ -45,24 +45,9 @@
   --bs-link-color-rgb: 28, 25, 23;
   --bs-link-hover-color: #3d3530;
   --bs-link-hover-color-rgb: 61, 53, 48;
-  --bs-link-decoration: none;
 
   /* Bootstrap — forma */
   --bs-border-radius: 6px;
-  --bs-border-radius-sm: 4px;
-  --bs-border-radius-lg: 8px;
-  --bs-border-radius-xl: 10px;
-  --bs-border-radius-pill: 100px;
-  --bs-box-shadow: none;
-  --bs-box-shadow-sm: none;
-  --bs-box-shadow-lg: none;
-  --bs-box-shadow-inset: none;
-
-  /* Bootstrap — botones */
-  --bs-btn-font-size: 0.875rem;
-  --bs-btn-border-radius: 3px;
-  --bs-btn-padding-x: 1.5rem;
-  --bs-btn-padding-y: 1.5rem;
 }
 
 ul,
