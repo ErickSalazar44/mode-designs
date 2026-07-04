@@ -22,6 +22,9 @@ web-desarrollo/
 └── assets/                Imágenes, audio y video
 ```
 
+<img width="1428" height="461" alt="Screenshot 2026-07-03 at 7 55 38 PM" src="https://github.com/user-attachments/assets/f28082fc-9a5b-42bd-9970-df35f8f8bb4e" />
+
+
 ## Stack
 
 - HTML5 semántico
