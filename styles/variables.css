@@ -29,7 +29,7 @@
   --fs-xl: 2rem;
   --fs-title: clamp(2.5rem, 4vw, 4.5rem);
   --fs-display: clamp(3rem, 8.5vw, 6rem);
-  --fs-hero: clamp(3rem, 8vw, 9rem);
+  --fs-hero: clamp(5rem, 14vw, 10rem);
 
   /* Espaciado */
   --sp-sm: 1rem;
