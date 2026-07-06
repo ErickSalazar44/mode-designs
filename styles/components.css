@@ -41,7 +41,8 @@
 .hero {
   position: relative;
   height: calc(100vh - var(--header-h) - var(--sp-sm));
-  height: calc(100svh - var(--header-h) - var(--sp-sm));
+  height: calc(100svh - var(--header-h) - var(--sp-sm)); /* fallback */
+  max-height: 800px;
   overflow: hidden;
   display: flex;
   flex-direction: column;
